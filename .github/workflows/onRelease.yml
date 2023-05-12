@@ -12,8 +12,18 @@ on:
         required: true
 jobs:
   npm:
-    uses: oclif/github-workflows/.github/workflows/npmPublish.yml@main
-    with:
-      tag: latest
-      githubTag: ${{ github.event.release.tag_name || inputs.tag }}
-    secrets: inherit
+    # uses: oclif/github-workflows/.github/workflows/npmPublish.yml@main
+    # with:
+    #   tag: latest
+    #   githubTag: ${{ github.event.release.tag_name || inputs.tag }}
+    # secrets: inherit
+
+    - name: Publish if version has been updated
+      uses: houtianze/npm-publish-action@master
+      with: # All of theses inputs are optional
+        tag_name: "v%s"
+        tag_message: "v%s"
+        commit_pattern: "^(?:Release|Version) (\\S+)"
+      env: # More info about the environment variables in the README
+        GITHUB_TOKEN: ${{ secrets.SVC_CLI_BOT_GITHUB_TOKEN }} # Leave this as is, it's automatically generated
+        NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # You need to set this in your repo settings
