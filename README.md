@@ -23,7 +23,7 @@ $ npm install -g hello-cli-app
 $ hello-cli-app COMMAND
 running command...
 $ hello-cli-app (--version)
-hello-cli-app/1.0.0 win32-x64 node-v18.16.0
+hello-cli-app/1.0.1 win32-x64 node-v18.16.0
 $ hello-cli-app --help [COMMAND]
 USAGE
   $ hello-cli-app COMMAND
@@ -102,7 +102,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/skbhati199/hello-cli-app/blob/v1.0.0/dist/commands/hello/index.ts)_
+_See code: [dist/commands/hello/index.ts](https://github.com/skbhati199/hello-cli-app/blob/v1.0.1/dist/commands/hello/index.ts)_
 
 ## `hello-cli-app hello world`
 
