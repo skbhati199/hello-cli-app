@@ -1,6 +1,6 @@
 {
   "name": "hello-cli-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Hello Cli Testing App",
   "author": "Sonu Kumar @skbhati199",
   "bin": {
