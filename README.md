@@ -19,14 +19,14 @@ oclif example Hello World CLI
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g mynewcli
-$ mynewcli COMMAND
+$ npm install -g hello-cli-app
+$ hello-cli-app COMMAND
 running command...
-$ mynewcli (--version)
-mynewcli/0.0.0 win32-x64 node-v18.16.0
-$ mynewcli --help [COMMAND]
+$ hello-cli-app (--version)
+hello-cli-app/1.0.0 win32-x64 node-v18.16.0
+$ hello-cli-app --help [COMMAND]
 USAGE
-  $ mynewcli COMMAND
+  $ hello-cli-app COMMAND
 ...
 ```
 <!-- usagestop -->
@@ -44,26 +44,49 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`mynewcli hello PERSON`](#mynewcli-hello-person)
-* [`mynewcli hello world`](#mynewcli-hello-world)
-* [`mynewcli help [COMMANDS]`](#mynewcli-help-commands)
-* [`mynewcli plugins`](#mynewcli-plugins)
-* [`mynewcli plugins:install PLUGIN...`](#mynewcli-pluginsinstall-plugin)
-* [`mynewcli plugins:inspect PLUGIN...`](#mynewcli-pluginsinspect-plugin)
-* [`mynewcli plugins:install PLUGIN...`](#mynewcli-pluginsinstall-plugin-1)
-* [`mynewcli plugins:link PLUGIN`](#mynewcli-pluginslink-plugin)
-* [`mynewcli plugins:uninstall PLUGIN...`](#mynewcli-pluginsuninstall-plugin)
-* [`mynewcli plugins:uninstall PLUGIN...`](#mynewcli-pluginsuninstall-plugin-1)
-* [`mynewcli plugins:uninstall PLUGIN...`](#mynewcli-pluginsuninstall-plugin-2)
-* [`mynewcli plugins update`](#mynewcli-plugins-update)
+* [`hello-cli-app create create USER`](#hello-cli-app-create-create-user)
+* [`hello-cli-app hello PERSON`](#hello-cli-app-hello-person)
+* [`hello-cli-app hello world`](#hello-cli-app-hello-world)
+* [`hello-cli-app help [COMMANDS]`](#hello-cli-app-help-commands)
+* [`hello-cli-app plugins`](#hello-cli-app-plugins)
+* [`hello-cli-app plugins:install PLUGIN...`](#hello-cli-app-pluginsinstall-plugin)
+* [`hello-cli-app plugins:inspect PLUGIN...`](#hello-cli-app-pluginsinspect-plugin)
+* [`hello-cli-app plugins:install PLUGIN...`](#hello-cli-app-pluginsinstall-plugin-1)
+* [`hello-cli-app plugins:link PLUGIN`](#hello-cli-app-pluginslink-plugin)
+* [`hello-cli-app plugins:uninstall PLUGIN...`](#hello-cli-app-pluginsuninstall-plugin)
+* [`hello-cli-app plugins:uninstall PLUGIN...`](#hello-cli-app-pluginsuninstall-plugin-1)
+* [`hello-cli-app plugins:uninstall PLUGIN...`](#hello-cli-app-pluginsuninstall-plugin-2)
+* [`hello-cli-app plugins update`](#hello-cli-app-plugins-update)
 
-## `mynewcli hello PERSON`
+## `hello-cli-app create create USER`
+
+Gitb App
+
+```
+USAGE
+  $ hello-cli-app create create USER -g <value>
+
+ARGUMENTS
+  USER  Person to say hello to
+
+FLAGS
+  -g, --github=<value>  (required) Who is saying hello
+
+DESCRIPTION
+  Gitb App
+
+EXAMPLES
+  $ hello-cli-app create CreateApp
+  Create a CreateApp! (./src/commands/create/create.ts)
+```
+
+## `hello-cli-app hello PERSON`
 
 Say hello
 
 ```
 USAGE
-  $ mynewcli hello PERSON -f <value>
+  $ hello-cli-app hello PERSON -f <value>
 
 ARGUMENTS
   PERSON  Person to say hello to
@@ -75,35 +98,35 @@ DESCRIPTION
   Say hello
 
 EXAMPLES
-  $ oex hello friend --from oclif
+  $ hello-cli-app hello friend --from oclif
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/skbhati199/mynewcli/blob/v0.0.0/dist/commands/hello/index.ts)_
+_See code: [dist/commands/hello/index.ts](https://github.com/skbhati199/hello-cli-app/blob/v1.0.0/dist/commands/hello/index.ts)_
 
-## `mynewcli hello world`
+## `hello-cli-app hello world`
 
 Say hello world
 
 ```
 USAGE
-  $ mynewcli hello world
+  $ hello-cli-app hello world
 
 DESCRIPTION
   Say hello world
 
 EXAMPLES
-  $ mynewcli hello world
+  $ hello-cli-app hello world
   hello world! (./src/commands/hello/world.ts)
 ```
 
-## `mynewcli help [COMMANDS]`
+## `hello-cli-app help [COMMANDS]`
 
-Display help for mynewcli.
+Display help for hello-cli-app.
 
 ```
 USAGE
-  $ mynewcli help [COMMANDS] [-n]
+  $ hello-cli-app help [COMMANDS] [-n]
 
 ARGUMENTS
   COMMANDS  Command to show help for.
@@ -112,18 +135,18 @@ FLAGS
   -n, --nested-commands  Include all nested commands in the output.
 
 DESCRIPTION
-  Display help for mynewcli.
+  Display help for hello-cli-app.
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.2.9/src/commands/help.ts)_
 
-## `mynewcli plugins`
+## `hello-cli-app plugins`
 
 List installed plugins.
 
 ```
 USAGE
-  $ mynewcli plugins [--core]
+  $ hello-cli-app plugins [--core]
 
 FLAGS
   --core  Show core plugins.
@@ -132,18 +155,18 @@ DESCRIPTION
   List installed plugins.
 
 EXAMPLES
-  $ mynewcli plugins
+  $ hello-cli-app plugins
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.4.7/src/commands/plugins/index.ts)_
 
-## `mynewcli plugins:install PLUGIN...`
+## `hello-cli-app plugins:install PLUGIN...`
 
 Installs a plugin into the CLI.
 
 ```
 USAGE
-  $ mynewcli plugins:install PLUGIN...
+  $ hello-cli-app plugins:install PLUGIN...
 
 ARGUMENTS
   PLUGIN  Plugin to install.
@@ -165,23 +188,23 @@ DESCRIPTION
 
 
 ALIASES
-  $ mynewcli plugins add
+  $ hello-cli-app plugins add
 
 EXAMPLES
-  $ mynewcli plugins:install myplugin 
+  $ hello-cli-app plugins:install myplugin 
 
-  $ mynewcli plugins:install https://github.com/someuser/someplugin
+  $ hello-cli-app plugins:install https://github.com/someuser/someplugin
 
-  $ mynewcli plugins:install someuser/someplugin
+  $ hello-cli-app plugins:install someuser/someplugin
 ```
 
-## `mynewcli plugins:inspect PLUGIN...`
+## `hello-cli-app plugins:inspect PLUGIN...`
 
 Displays installation properties of a plugin.
 
 ```
 USAGE
-  $ mynewcli plugins:inspect PLUGIN...
+  $ hello-cli-app plugins:inspect PLUGIN...
 
 ARGUMENTS
   PLUGIN  [default: .] Plugin to inspect.
@@ -197,16 +220,16 @@ DESCRIPTION
   Displays installation properties of a plugin.
 
 EXAMPLES
-  $ mynewcli plugins:inspect myplugin
+  $ hello-cli-app plugins:inspect myplugin
 ```
 
-## `mynewcli plugins:install PLUGIN...`
+## `hello-cli-app plugins:install PLUGIN...`
 
 Installs a plugin into the CLI.
 
 ```
 USAGE
-  $ mynewcli plugins:install PLUGIN...
+  $ hello-cli-app plugins:install PLUGIN...
 
 ARGUMENTS
   PLUGIN  Plugin to install.
@@ -228,23 +251,23 @@ DESCRIPTION
 
 
 ALIASES
-  $ mynewcli plugins add
+  $ hello-cli-app plugins add
 
 EXAMPLES
-  $ mynewcli plugins:install myplugin 
+  $ hello-cli-app plugins:install myplugin 
 
-  $ mynewcli plugins:install https://github.com/someuser/someplugin
+  $ hello-cli-app plugins:install https://github.com/someuser/someplugin
 
-  $ mynewcli plugins:install someuser/someplugin
+  $ hello-cli-app plugins:install someuser/someplugin
 ```
 
-## `mynewcli plugins:link PLUGIN`
+## `hello-cli-app plugins:link PLUGIN`
 
 Links a plugin into the CLI for development.
 
 ```
 USAGE
-  $ mynewcli plugins:link PLUGIN
+  $ hello-cli-app plugins:link PLUGIN
 
 ARGUMENTS
   PATH  [default: .] path to plugin
@@ -262,16 +285,16 @@ DESCRIPTION
 
 
 EXAMPLES
-  $ mynewcli plugins:link myplugin
+  $ hello-cli-app plugins:link myplugin
 ```
 
-## `mynewcli plugins:uninstall PLUGIN...`
+## `hello-cli-app plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ mynewcli plugins:uninstall PLUGIN...
+  $ hello-cli-app plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -284,17 +307,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ mynewcli plugins unlink
-  $ mynewcli plugins remove
+  $ hello-cli-app plugins unlink
+  $ hello-cli-app plugins remove
 ```
 
-## `mynewcli plugins:uninstall PLUGIN...`
+## `hello-cli-app plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ mynewcli plugins:uninstall PLUGIN...
+  $ hello-cli-app plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -307,17 +330,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ mynewcli plugins unlink
-  $ mynewcli plugins remove
+  $ hello-cli-app plugins unlink
+  $ hello-cli-app plugins remove
 ```
 
-## `mynewcli plugins:uninstall PLUGIN...`
+## `hello-cli-app plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ mynewcli plugins:uninstall PLUGIN...
+  $ hello-cli-app plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -330,17 +353,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ mynewcli plugins unlink
-  $ mynewcli plugins remove
+  $ hello-cli-app plugins unlink
+  $ hello-cli-app plugins remove
 ```
 
-## `mynewcli plugins update`
+## `hello-cli-app plugins update`
 
 Update installed plugins.
 
 ```
 USAGE
-  $ mynewcli plugins update [-h] [-v]
+  $ hello-cli-app plugins update [-h] [-v]
 
 FLAGS
   -h, --help     Show CLI help.
